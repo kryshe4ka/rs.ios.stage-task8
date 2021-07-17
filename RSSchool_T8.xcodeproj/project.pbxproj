@@ -8,27 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		3D374E5626A1C63500C86470 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E5526A1C63500C86470 /* AppDelegate.m */; };
-		3D374E5926A1C63500C86470 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E5826A1C63500C86470 /* SceneDelegate.m */; };
 		3D374E5C26A1C63500C86470 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E5B26A1C63500C86470 /* ViewController.m */; };
-		3D374E5F26A1C63600C86470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D374E5D26A1C63600C86470 /* Main.storyboard */; };
 		3D374E6126A1C63700C86470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D374E6026A1C63700C86470 /* Assets.xcassets */; };
 		3D374E6426A1C63700C86470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D374E6226A1C63700C86470 /* LaunchScreen.storyboard */; };
 		3D374E6726A1C63700C86470 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E6626A1C63700C86470 /* main.m */; };
+		3D374E7026A1CCCB00C86470 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D374E6E26A1CCCB00C86470 /* Montserrat-Medium.ttf */; };
+		3D374E7126A1CCCB00C86470 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D374E6F26A1CCCB00C86470 /* Montserrat-Regular.ttf */; };
+		3D374E7626A1D8A100C86470 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E7526A1D8A100C86470 /* DrawingsViewController.swift */; };
+		3D374E7926A1EFA000C86470 /* KLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E7826A1EFA000C86470 /* KLButton.m */; };
+		3D374E7D26A2C18F00C86470 /* KLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D374E7C26A2C18F00C86470 /* KLView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D374E5126A1C63500C86470 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D374E5426A1C63500C86470 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D374E5526A1C63500C86470 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3D374E5726A1C63500C86470 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		3D374E5826A1C63500C86470 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		3D374E5A26A1C63500C86470 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3D374E5B26A1C63500C86470 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3D374E5E26A1C63600C86470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D374E6026A1C63700C86470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D374E6326A1C63700C86470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D374E6526A1C63700C86470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D374E6626A1C63700C86470 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D374E6E26A1CCCB00C86470 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3D374E6F26A1CCCB00C86470 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		3D374E7426A1D8A100C86470 /* RSSchool_T8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T8-Bridging-Header.h"; sourceTree = "<group>"; };
+		3D374E7526A1D8A100C86470 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
+		3D374E7726A1EFA000C86470 /* KLButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLButton.h; sourceTree = "<group>"; };
+		3D374E7826A1EFA000C86470 /* KLButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLButton.m; sourceTree = "<group>"; };
+		3D374E7B26A2C18F00C86470 /* KLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLView.h; sourceTree = "<group>"; };
+		3D374E7C26A2C18F00C86470 /* KLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +69,72 @@
 		3D374E5326A1C63500C86470 /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
-				3D374E5426A1C63500C86470 /* AppDelegate.h */,
-				3D374E5526A1C63500C86470 /* AppDelegate.m */,
-				3D374E5726A1C63500C86470 /* SceneDelegate.h */,
-				3D374E5826A1C63500C86470 /* SceneDelegate.m */,
-				3D374E5A26A1C63500C86470 /* ViewController.h */,
-				3D374E5B26A1C63500C86470 /* ViewController.m */,
-				3D374E5D26A1C63600C86470 /* Main.storyboard */,
+				3D374E6D26A1CC0B00C86470 /* Fonts */,
+				3D374E7226A1D3A800C86470 /* System */,
+				3D374E7326A1D6CD00C86470 /* Artist */,
 				3D374E6026A1C63700C86470 /* Assets.xcassets */,
-				3D374E6226A1C63700C86470 /* LaunchScreen.storyboard */,
 				3D374E6526A1C63700C86470 /* Info.plist */,
-				3D374E6626A1C63700C86470 /* main.m */,
+				3D374E7526A1D8A100C86470 /* DrawingsViewController.swift */,
+				3D374E7426A1D8A100C86470 /* RSSchool_T8-Bridging-Header.h */,
+				3D374E7F26A2C1A500C86470 /* Custom Items */,
 			);
 			path = RSSchool_T8;
+			sourceTree = "<group>";
+		};
+		3D374E6D26A1CC0B00C86470 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E6E26A1CCCB00C86470 /* Montserrat-Medium.ttf */,
+				3D374E6F26A1CCCB00C86470 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3D374E7226A1D3A800C86470 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E5426A1C63500C86470 /* AppDelegate.h */,
+				3D374E5526A1C63500C86470 /* AppDelegate.m */,
+				3D374E6226A1C63700C86470 /* LaunchScreen.storyboard */,
+				3D374E6626A1C63700C86470 /* main.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		3D374E7326A1D6CD00C86470 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E5A26A1C63500C86470 /* ViewController.h */,
+				3D374E5B26A1C63500C86470 /* ViewController.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		3D374E7A26A1F03B00C86470 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E7726A1EFA000C86470 /* KLButton.h */,
+				3D374E7826A1EFA000C86470 /* KLButton.m */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3D374E7E26A2C19600C86470 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E7B26A2C18F00C86470 /* KLView.h */,
+				3D374E7C26A2C18F00C86470 /* KLView.m */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		3D374E7F26A2C1A500C86470 /* Custom Items */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E7E26A2C19600C86470 /* Canvas */,
+				3D374E7A26A1F03B00C86470 /* Buttons */,
+			);
+			path = "Custom Items";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +167,7 @@
 				TargetAttributes = {
 					3D374E5026A1C63500C86470 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -132,9 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D374E7126A1CCCB00C86470 /* Montserrat-Regular.ttf in Resources */,
 				3D374E6426A1C63700C86470 /* LaunchScreen.storyboard in Resources */,
+				3D374E7026A1CCCB00C86470 /* Montserrat-Medium.ttf in Resources */,
 				3D374E6126A1C63700C86470 /* Assets.xcassets in Resources */,
-				3D374E5F26A1C63600C86470 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,23 +209,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D374E5C26A1C63500C86470 /* ViewController.m in Sources */,
+				3D374E7926A1EFA000C86470 /* KLButton.m in Sources */,
+				3D374E7626A1D8A100C86470 /* DrawingsViewController.swift in Sources */,
 				3D374E5626A1C63500C86470 /* AppDelegate.m in Sources */,
 				3D374E6726A1C63700C86470 /* main.m in Sources */,
-				3D374E5926A1C63500C86470 /* SceneDelegate.m in Sources */,
+				3D374E7D26A2C18F00C86470 /* KLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3D374E5D26A1C63600C86470 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D374E5E26A1C63600C86470 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D374E6226A1C63700C86470 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -225,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,15 +348,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UK96588ZD7;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kryshe4ka.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/RSSchool_T8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +371,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UK96588ZD7;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kryshe4ka.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/RSSchool_T8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
