@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KLButton : UIButton
 
 -(void)setUp;
+- (void)setHighlighted:(BOOL)highlighted;
 
 @end
 

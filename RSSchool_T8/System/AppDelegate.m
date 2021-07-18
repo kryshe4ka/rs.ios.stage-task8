@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [UIView appearance].tintColor = [UIColor colorNamed:@"Light Green Sea"];
+    
     UIWindow * window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UIViewController * rootVC = [[ViewController alloc] init];
     

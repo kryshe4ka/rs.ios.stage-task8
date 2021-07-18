@@ -4,3 +4,4 @@
 
 #import "ViewController.h"
 #import "KLButton.h"
+#import "PaletteViewController.h"

@@ -6,11 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RSSchool_T8-Swift.h"
 
-@interface ViewController : UIViewController
-
-@property (strong, nonatomic) DrawingsViewController *secondViewController;
+@interface ViewController : UIViewController 
 
 @end
 

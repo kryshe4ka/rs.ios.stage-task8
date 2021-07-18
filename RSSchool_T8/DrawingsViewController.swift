@@ -38,18 +38,6 @@ class DrawingsViewController: UIViewController {
             self.view.addSubview(button!)
         }
         
-        
-        
-        
-        // создаем кнопки нужных размеров
-//        self.drawButton = [[KLButton alloc] initWithFrame:CGRectMake(243, 452, 91, 32)];
-//        [self.drawButton setTitle:@"Draw" forState:UIControlStateNormal];
-//        self.openPaletteButton = [[KLButton alloc] initWithFrame:CGRectMake(20, 452, 163, 32)];
-//        [self.openPaletteButton setTitle:@"Open Palette" forState:UIControlStateNormal];
-//        self.openTimerButton = [[KLButton alloc] initWithFrame:CGRectMake(20, 504, 151, 32)];
-//        [self.openTimerButton setTitle:@"Open Timer" forState:UIControlStateNormal];
-//        self.shareButton = [[KLButton alloc] initWithFrame:CGRectMake(239, 504, 95, 32)];
-//        [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
+        self.navigationItem.title = "Drawings"
     }
-
 }

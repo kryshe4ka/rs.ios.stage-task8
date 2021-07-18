@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KLView : UIView
 
 -(void)setUp;
+-(UIImage *)asImage;
 
 @end
 
