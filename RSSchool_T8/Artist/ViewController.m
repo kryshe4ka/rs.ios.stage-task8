@@ -139,15 +139,14 @@
 
 }
 -(void)shareImage:(id)sender {
-    NSLog(@"share image");
     self.imageVC = [self.canvas asImage];
-    UIImageWriteToSavedPhotosAlbum(self.imageVC, nil, nil, nil);
-    
-    
-    
-    // убрать алерт потом!!!!!! !!! !!!
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Save" message:@"Image saved to album" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    // вызываем активити окно
+    NSArray *images = @[self.imageVC];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:images applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[];
+    activityVC.popoverPresentationController.sourceView = self.view;
+    activityVC.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/4, 0, 0);
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 -(void)draw:(id) sender {
