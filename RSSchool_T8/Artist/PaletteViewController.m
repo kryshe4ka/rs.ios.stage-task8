@@ -18,13 +18,16 @@
 @property (nonatomic, strong) UIColor * thirdColor;
 @property int counter;
 @property (nonatomic, strong) NSArray<UIColor *> * colors;
+@property (nonatomic, strong) NSMutableArray<KLButton *> * selectedColorButtonsArray;
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
 @implementation PaletteViewController
 
 -(void)setUp {
-    self.view.frame = CGRectMake(0, 333, 375, 363.5);
+    self.view.frame = CGRectMake(0, 333, 375, 383.5);
     self.view.backgroundColor = [UIColor whiteColor];
     CATransition *transition = [CATransition animation];
     transition.duration = 1;
@@ -46,6 +49,7 @@
     self.firstColor = [UIColor colorNamed:@"Black"];
     self.secondColor = [UIColor colorNamed:@"Black"];
     self.thirdColor = [UIColor colorNamed:@"Black"];
+    self.selectedColorButtonsArray = [NSMutableArray arrayWithCapacity:3];
     
     self.colors = @[[UIColor colorNamed:@"KLRed"], [UIColor colorNamed:@"KLDarkPurple"], [UIColor colorNamed:@"KLGreen"], [UIColor colorNamed:@"KLGray"], [UIColor colorNamed:@"KLLightPurple"], [UIColor colorNamed:@"KLOrange"], [UIColor colorNamed:@"KLYellow"], [UIColor colorNamed:@"KLSky"], [UIColor colorNamed:@"KLPink"], [UIColor colorNamed:@"KLDarkGray"], [UIColor colorNamed:@"KLDarkGreen"], [UIColor colorNamed:@"KLBrown"]];
     
@@ -77,28 +81,107 @@
     }
 }
 
+//-(void)
+
 -(void)pickColor:(KLButton*)sender {
-    self.counter++;
-    NSLog(@"%d", self.counter);
     
-    switch (self.counter) {
-        case 1:
-            self.firstColor = self.colors[sender.tag];
-            NSLog(@"%@", self.firstColor);
-            break;
-        case 2:
-            self.secondColor = self.colors[sender.tag];
-            NSLog(@"%@", self.secondColor);
-            break;
-        case 3:
-            self.thirdColor = self.colors[sender.tag];
-            NSLog(@"%@", self.thirdColor);
-            self.counter = 0;
-            break;
-        default:
-            self.counter = 0;
-            break;
+    if ([self.selectedColorButtonsArray containsObject:sender]) {
+        self.counter--;
+        sender.subviews[1].frame = CGRectMake(8, 8, 24, 24);
+        
+        if (self.firstColor == self.colors[sender.tag]) {
+            self.firstColor = [UIColor colorNamed:@"Black"];
+
+        } else if (self.secondColor == self.colors[sender.tag]) {
+            self.secondColor = [UIColor colorNamed:@"Black"];
+
+        } else {
+            self.thirdColor = [UIColor colorNamed:@"Black"];
+        }
+        [self.selectedColorButtonsArray removeObject:sender];
+        NSLog(@"%lu", (unsigned long)self.selectedColorButtonsArray.count);
+
+    } else {
+        self.counter++;
+        
+        switch (self.counter) {
+            case 1:
+                if (self.selectedColorButtonsArray.count > 1) {
+                    self.selectedColorButtonsArray[0].subviews[1].frame = CGRectMake(8, 8, 24, 24);
+                    [self.selectedColorButtonsArray removeObjectAtIndex:0];
+                }
+                self.firstColor = self.colors[sender.tag];
+                sender.subviews[1].frame = CGRectMake(2, 2, 36, 36);
+                //change view background color
+                self.view.backgroundColor = self.colors[sender.tag];
+                //retun default background color after 1 sec
+                        if (self.timer.isValid) {
+                            [self.timer invalidate];
+                            
+                        }
+                        self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                                      target:self
+                                                                    selector:@selector(setDefaultBackgroundColor)
+                                                                    userInfo:nil
+                                                                     repeats:NO];
+                
+                [self.selectedColorButtonsArray insertObject:sender atIndex:0];
+                break;
+            case 2:
+                if (self.selectedColorButtonsArray.count > 1) {
+                    self.selectedColorButtonsArray[1].subviews[1].frame = CGRectMake(8, 8, 24, 24);
+                    [self.selectedColorButtonsArray removeObjectAtIndex:1];
+                }
+                self.secondColor = self.colors[sender.tag];
+                sender.subviews[1].frame = CGRectMake(2, 2, 36, 36);
+                //change view background color
+                self.view.backgroundColor = self.colors[sender.tag];
+                //retun default background color after 1 sec
+                        if (self.timer.isValid) {
+                            [self.timer invalidate];
+                            
+                        }
+                        self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                                      target:self
+                                                                    selector:@selector(setDefaultBackgroundColor)
+                                                                    userInfo:nil
+                                                                     repeats:NO];
+                [self.selectedColorButtonsArray insertObject:sender atIndex:1];
+                break;
+            case 3:
+                
+                if (self.selectedColorButtonsArray.count > 2) {
+                    self.selectedColorButtonsArray[2].subviews[1].frame = CGRectMake(8, 8, 24, 24);
+                    [self.selectedColorButtonsArray removeObjectAtIndex:2];
+                }
+                self.thirdColor = self.colors[sender.tag];
+                sender.subviews[1].frame = CGRectMake(2, 2, 36, 36);
+                //change view background color
+                self.view.backgroundColor = self.colors[sender.tag];
+                //retun default background color after 1 sec
+                        if (self.timer.isValid) {
+                            [self.timer invalidate];
+                            
+                        }
+                        self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                                      target:self
+                                                                    selector:@selector(setDefaultBackgroundColor)
+                                                                    userInfo:nil
+                                                                     repeats:NO];
+                [self.selectedColorButtonsArray insertObject:sender atIndex:2];
+                self.counter = 0;
+                break;
+            default:
+                self.counter = 0;
+                break;
+        }
     }
+    
+    
+    
+}
+- (void)setDefaultBackgroundColor {
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 - (void)hideContentController {
     [self.delegate didColorsSet: self.firstColor second:self.secondColor third:self.thirdColor];
