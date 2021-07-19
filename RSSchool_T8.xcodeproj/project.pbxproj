@@ -80,10 +80,9 @@
 				3D374E7426A1D8A100C86470 /* RSSchool_T8-Bridging-Header.h */,
 				3D374E6D26A1CC0B00C86470 /* Fonts */,
 				3D374E7226A1D3A800C86470 /* System */,
-				3D374E7326A1D6CD00C86470 /* Artist */,
 				3D374E6026A1C63700C86470 /* Assets.xcassets */,
 				3D374E6526A1C63700C86470 /* Info.plist */,
-				3D374E7526A1D8A100C86470 /* DrawingsViewController.swift */,
+				3D374E8F26A5BEBD00C86470 /* View Controllers */,
 				3D374E7F26A2C1A500C86470 /* Custom Items */,
 			);
 			path = RSSchool_T8;
@@ -112,11 +111,9 @@
 		3D374E7326A1D6CD00C86470 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
-				3D374E5A26A1C63500C86470 /* ViewController.h */,
-				3D374E5B26A1C63500C86470 /* ViewController.m */,
-				3D374E8726A3570D00C86470 /* PaletteViewController.h */,
-				3D374E8826A3570D00C86470 /* PaletteViewController.m */,
-				3D374E8D26A4120900C86470 /* TimeViewController.swift */,
+				3D374E9126A5BF0100C86470 /* Artist */,
+				3D374E9026A5BEF400C86470 /* Palette */,
+				3D374E9226A5BF1000C86470 /* Timer */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -156,6 +153,49 @@
 				3D374E8526A3181D00C86470 /* UIView+AnimatedLines.m */,
 			);
 			path = Layers;
+			sourceTree = "<group>";
+		};
+		3D374E8F26A5BEBD00C86470 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E7326A1D6CD00C86470 /* Artist */,
+				3D374E9326A5BF2000C86470 /* Drawing */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3D374E9026A5BEF400C86470 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E8726A3570D00C86470 /* PaletteViewController.h */,
+				3D374E8826A3570D00C86470 /* PaletteViewController.m */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		3D374E9126A5BF0100C86470 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E5A26A1C63500C86470 /* ViewController.h */,
+				3D374E5B26A1C63500C86470 /* ViewController.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		3D374E9226A5BF1000C86470 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E8D26A4120900C86470 /* TimeViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		3D374E9326A5BF2000C86470 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				3D374E7526A1D8A100C86470 /* DrawingsViewController.swift */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -10,30 +10,21 @@ import UIKit
 class DrawingsViewController: UIViewController {
     // Объявляем делегат для использования
     @objc var delegate:DrawingDelegate?
-    
     var planetButton: KLButton?
     var headButton: KLButton?
     var treeButton: KLButton?
     var landscapeButton: KLButton?
-    
     var currentButton:Int = 1
     var buttons: [KLButton?] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = .white
-        
-        
         self.planetButton = KLButton.init(frame: CGRect(x: 88, y: 112, width: 200, height: 40))
         self.planetButton?.setTitle("Planet", for: .normal)
-        
         self.headButton = KLButton.init(frame: CGRect(x: 88, y: 167, width: 200, height: 40))
         self.headButton?.setTitle("Head", for: .normal)
-        
         self.treeButton = KLButton.init(frame: CGRect(x: 88, y: 222, width: 200, height: 40))
         self.treeButton?.setTitle("Tree", for: .normal)
-        
         self.landscapeButton = KLButton.init(frame: CGRect(x: 88, y: 277, width: 200, height: 40))
         self.landscapeButton?.setTitle("Landscape", for: .normal)
         
@@ -44,9 +35,7 @@ class DrawingsViewController: UIViewController {
             button?.addTarget(self, action: #selector(self.selectButton(sender:)), for: .touchUpInside)
             self.view.addSubview(button!)
         }
-        
         self.navigationItem.title = "Drawings"
-        
         setCurrentButtonStyle()
     }
     
@@ -56,12 +45,10 @@ class DrawingsViewController: UIViewController {
     }
     
     @objc func selectButton(sender: KLButton){
-
         buttons[currentButton]?.layer.shadowColor = UIColor.init(named: "Black")?.cgColor
         buttons[currentButton]?.layer.shadowOpacity = 0.25
         buttons[currentButton]?.layer.borderWidth = 0
-
-            
+        // выбираем картинку по названию
         switch sender.titleLabel!.text {
         case "Planet":
             delegate?.didImageSet?(0)
@@ -80,11 +67,9 @@ class DrawingsViewController: UIViewController {
             delegate?.didImageSet?(1)
             currentButton = 1
         }
-        
         buttons[currentButton]?.layer.shadowColor = UIColor.clear.cgColor
         buttons[currentButton]?.layer.borderColor = UIColor.init(red: 151/256, green: 200/256, blue: 186/256, alpha: 1).cgColor
         buttons[currentButton]?.layer.borderWidth = 1
         setCurrentButtonStyle()
     }
-    
 }
