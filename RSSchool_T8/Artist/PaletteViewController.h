@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didTimeSet:(float) time;
 @end
 
+@protocol DrawingDelegate
+@optional
+// объявляем метод делегата
+- (void)didImageSet:(int) imageNumber;
+@end
+
 @interface PaletteViewController : UIViewController
 
 @property (weak, nonatomic) id<EventsDelegate> delegate;

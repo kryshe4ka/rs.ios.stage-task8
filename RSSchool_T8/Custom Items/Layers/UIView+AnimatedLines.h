@@ -13,7 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)animateLinesWithColor:(CGColorRef)lineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
 
--(void)animateLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+-(void)animateHeadLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+
+-(void)animatePlanetLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+
+-(void)animateTreeLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+
+-(void)animateLandscapeLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
 
 @end
 

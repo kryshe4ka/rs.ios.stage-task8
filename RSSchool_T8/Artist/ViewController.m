@@ -14,7 +14,7 @@
 #import "RSSchool_T8-Swift.h"
 
 
-@interface ViewController () <EventsDelegate, TimerDelegate>
+@interface ViewController () <EventsDelegate, TimerDelegate, DrawingDelegate>
 
 @property (nonatomic, strong) KLButton * drawButton;
 @property (nonatomic, strong) KLButton * shareButton;
@@ -31,6 +31,7 @@
 @property (nonatomic, strong) NSTimer * timer;
 @property float seconds;
 @property float animationDuration;
+@property int imageNumber;
 
 
 @property (nonatomic, strong) UIImage *imageVC;
@@ -59,6 +60,7 @@
     self.secondColor = [UIColor colorNamed:@"Black"];
     self.thirdColor = [UIColor colorNamed:@"Black"];
     self.animationDuration = 1.0; // по дефолту 1 секунда на отрисовку
+    self.imageNumber = 1;
     
     //set the title of the navigation view
     self.navigationItem.title = @"Artist";
@@ -121,6 +123,7 @@
     
     
     self.drawinsViewController = [[DrawingsViewController alloc] init];
+    self.drawinsViewController.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -167,7 +170,22 @@
     self.openPaletteButton.enabled = NO;
     self.openTimerButton.enabled = NO;
     
-    [self.canvas animateLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
+    switch (self.imageNumber) {
+        case 0:
+            [self.canvas animatePlanetLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
+            break;
+        case 1:
+            [self.canvas animateHeadLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
+            break;
+        case 2:
+            [self.canvas animateTreeLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
+            break;
+        case 3:
+            [self.canvas animateLandscapeLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)updateTimer:(NSTimer *)theTimer {
@@ -240,6 +258,10 @@
 }
 - (void)didTimeSet:(float) time {
     self.animationDuration = time;
+}
+
+- (void)didImageSet:(int) imageNumber {
+    self.imageNumber = imageNumber;
 }
 
 @end
