@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol EventsDelegate
 @optional
 // объявляем метод делегата
-- (void)didFinishEvent:(UIColor *)color;
+- (void)didColorsSet:(UIColor *)firstColor second:(UIColor *)secondColor third:(UIColor*)thirdColor;
 @end
 
 @protocol TimerDelegate

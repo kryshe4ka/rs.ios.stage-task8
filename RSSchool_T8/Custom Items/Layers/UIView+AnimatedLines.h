@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView(AnimatedLines)
 
 -(void)animateLinesWithColor:(CGColorRef)lineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+
+-(void)animateLinesWithColor:(CGColorRef)lineColor withSecondColor:(CGColorRef)secondLineColor withThirdColor:(CGColorRef)thirdLineColor andLineWidth:(CGFloat)lineWidth animationDuration:(CGFloat)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

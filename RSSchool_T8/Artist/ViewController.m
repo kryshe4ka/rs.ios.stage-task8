@@ -39,6 +39,10 @@
 
 @property (nonatomic, strong) KLButton * saveButton;
 
+@property (nonatomic, strong) UIColor * firstColor;
+@property (nonatomic, strong) UIColor * secondColor;
+@property (nonatomic, strong) UIColor * thirdColor;
+
 
 @end
 
@@ -51,6 +55,9 @@
     [super viewDidLoad];
     //set the background color of the view
     self.view.backgroundColor = [UIColor whiteColor];
+    self.firstColor = [UIColor colorNamed:@"Black"];
+    self.secondColor = [UIColor colorNamed:@"Black"];
+    self.thirdColor = [UIColor colorNamed:@"Black"];
     self.animationDuration = 1.0; // по дефолту 1 секунда на отрисовку
     
     //set the title of the navigation view
@@ -65,9 +72,6 @@
     // устанавливаем шрифт и цвет правой кнопке в таббаре
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Montserrat-Regular" size:17], NSFontAttributeName,
         [UIColor colorNamed:@"Light Green Sea"], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-   
-    //self.navigationItem.backBarButtonItem.tintColor = [UIColor redColor];
-    
     
     // создаем кнопки нужных размеров
     self.resetButton = [[KLButton alloc] initWithFrame:CGRectMake(243, 452, 91, 32)];
@@ -150,7 +154,6 @@
 }
 
 -(void)draw:(id) sender {
-    NSLog(@"tapped");
     // экран Artist переходит в состояние draw
     self.openPaletteButton.layer.opacity = 0.5;
     self.openTimerButton.layer.opacity = 0.5;
@@ -164,14 +167,12 @@
     self.openPaletteButton.enabled = NO;
     self.openTimerButton.enabled = NO;
     
-    // запускаем рисование
-    [self.canvas animateLinesWithColor:[UIColor blueColor].CGColor andLineWidth:1 animationDuration:self.animationDuration];
+    [self.canvas animateLinesWithColor:self.firstColor.CGColor withSecondColor:self.secondColor.CGColor withThirdColor:self.thirdColor.CGColor andLineWidth:1 animationDuration:self.animationDuration];
 }
 
 - (void)updateTimer:(NSTimer *)theTimer {
     if (self.seconds>0) {
         self.seconds -= 0.01;
-        NSLog(@"Timer working %f", self.seconds);
     } else {
         [self.timer invalidate];
         NSLog(@"Timer end");
@@ -200,26 +201,24 @@
 }
 
 -(void)selectColor:(id)sender {
-    NSLog(@"palette tapped");
     [self.view addSubview:self.paletteViewController.view];
     [self.paletteViewController didMoveToParentViewController:self];
     // кнопка save
     self.saveButton = [[KLButton alloc] initWithFrame:CGRectMake(250, 20, 85, 32)];
     [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
-    
     [self.saveButton addTarget:self action:@selector(hidePalette) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.saveButton setUp];
     [self.paletteViewController.view addSubview:self.saveButton];
 }
 
-- (void)didFinishEvent:(UIColor *)color {
-    self.view.backgroundColor = color;
+- (void)didColorsSet:(UIColor *)firstColor second:(UIColor *)secondColor third:(UIColor *)thirdColor {
+    self.firstColor = firstColor;
+    self.secondColor = secondColor;
+    self.thirdColor = thirdColor;
 }
 
 
 -(void)openTimer:(id) sender {
-    NSLog(@"time tapped");
     [self.view addSubview:self.timeVCSWIFT.view];
     [self.timeVCSWIFT didMoveToParentViewController:self];
     
@@ -240,7 +239,6 @@
     [self.timeVCSWIFT hideContentController];
 }
 - (void)didTimeSet:(float) time {
-    NSLog(@"%f", time);
     self.animationDuration = time;
 }
 

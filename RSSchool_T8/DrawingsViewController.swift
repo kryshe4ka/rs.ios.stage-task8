@@ -14,6 +14,9 @@ class DrawingsViewController: UIViewController {
     var treeButton: KLButton?
     var landscapeButton: KLButton?
     
+    var currentButton = 1
+    var buttons: [KLButton?] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +34,7 @@ class DrawingsViewController: UIViewController {
         self.landscapeButton = KLButton.init(frame: CGRect(x: 88, y: 277, width: 200, height: 40))
         self.landscapeButton?.setTitle("Landscape", for: .normal)
         
-        let buttons = [planetButton, headButton, treeButton, landscapeButton];
+        buttons = [planetButton, headButton, treeButton, landscapeButton];
         
         for button in buttons {
             button?.setUp()
@@ -39,5 +42,15 @@ class DrawingsViewController: UIViewController {
         }
         
         self.navigationItem.title = "Drawings"
+        
+        setCurrentButtonStyle()
+        
+        //headButton?.layer.shadowColor = UIColor.init(named: "Light Green Sea")?.cgColor
+        
+    }
+    
+    func setCurrentButtonStyle() {
+        buttons[currentButton]?.layer.shadowColor = UIColor.init(named: "Light Green Sea")?.cgColor
+        buttons[currentButton]?.layer.shadowOpacity = 1.0        
     }
 }
